@@ -1,84 +1,494 @@
-{
-  "courses": [
-    {
-      "id": "e1c4a6c9-7f56-4aea-9449-0c9d84cd5331",
-      "name": "Csss",
-      "notes": [
-        {
-          "id": "f5449032-ab16-4b83-aeee-1a1f96e5e64e",
-          "title": "Index",
-          "html": "<h2>Seguir y completar el curso de html</h2><h2>Links:</h2>https://lenguajehtml.com/html/introduccion/que-es-html/",
-          "updatedAt": "2025-08-21T18:17:25.507Z"
-        }
-      ]
-    },
-    {
-      "id": "a6798fd8-3837-4605-9a15-5cb4ca2b8d9f",
-      "name": "Lenguajes de programacion",
-      "notes": [
-        {
-          "id": "1acfc977-7154-40e8-af37-5f5a6266f899",
-          "title": "Index",
-          "html": "<h2>Estudiamos distintos lenguajes.</h2><h2>Lenguajes a ver:</h2>PythonJava pooPhpPor ahora solo tengo que enfocarme en terminar el libro de poo que estoy leyendo y seguir practicando.",
-          "updatedAt": "2025-08-21T18:08:22.753Z"
-        }
-      ]
-    },
-    {
-      "id": "d7cd184c-fee8-4e7a-ae2e-6f866345a0ac",
-      "name": "Herramientas para la comunicacion efectiva",
-      "notes": [
-        {
-          "id": "bcab7929-d0f4-4667-bb98-9b0b7d7d2d91",
-          "title": "Semana 2",
-          "html": "<h2>Tarea! Grabar video.</h2>",
-          "updatedAt": "2025-08-21T18:09:41.550Z"
-        },
-        {
-          "id": "4f452a8f-21df-4ccc-9f82-a482eb28d55e",
-          "title": "Index",
-          "html": "<b>Nada de info por ahora, basicamente es un curso de oratoria</b><h2>NO FALTAR</h2>",
-          "updatedAt": "2025-08-21T18:09:22.414Z"
-        }
-      ]
-    },
-    {
-      "id": "65192613-58ad-4922-ab90-e6f7d2d20bfe",
-      "name": "Liderazgo y gestion de equipos",
-      "notes": [
-        {
-          "id": "d1e6b3a8-efd3-4650-9f96-9c4486a1e889",
-          "title": "Index",
-          "html": "<h2>Curso de teoria y practicas, solo no faltar.&nbsp;</h2><h2>Nada por sem 1 y 2</h2>",
-          "updatedAt": "2025-08-21T18:10:43.990Z"
-        }
-      ]
-    },
-    {
-      "id": "c1cbb71a-3abd-4f44-8e42-ef7a2237363b",
-      "name": "Negociación y narrativa",
-      "notes": [
-        {
-          "id": "0db7ea65-4fdb-415d-bd1b-db0b37afcaf6",
-          "title": "Index",
-          "html": "<h2>Nada que añadir la verdad. Teoria y trabajos sobre comunicacion y expos</h2>",
-          "updatedAt": "2025-08-21T18:11:31.816Z"
-        }
-      ]
-    },
-    {
-      "id": "39e2c592-5425-4daa-a2a2-452a4f5efea6",
-      "name": "INDEX",
-      "notes": [
-        {
-          "id": "5d468398-d6ca-43c0-8aa3-61fc0b37ea05",
-          "title": "INDEXTO",
-          "html": "<a href=\"https://www.lacartoons.com/serie/capitulo/1970?t=1\" target=\"_blank\" rel=\"noopener\">https://www.lacartoons.com/serie/capitulo/1970?t=1</a>",
-          "updatedAt": "2025-08-21T18:18:45.877Z"
-        }
-      ]
-    }
-  ],
-  "selectedCourseId": "39e2c592-5425-4daa-a2a2-452a4f5efea6",
-  "selectedNoteId": "5d468398-d6ca-43c0-8aa3-61fc0b37ea05"
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notas Uni — 100% HTML</title>
+  <style>
+   body {
+  background: #008080; /* verde azulado clásico Win95 */
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 10px;
+  color: black;
 }
+
+.app {
+  display: grid;
+  grid-template-columns: 220px 280px 1fr;
+  gap: 8px;
+  width: 100%;
+  height: 100vh;
+}
+
+.panel {
+  background: #c0c0c0;
+  border: 2px solid #fff;
+  border-right-color: #808080;
+  border-bottom-color: #808080;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: navy;
+  color: white;
+  padding: 3px 6px;
+  font-weight: bold;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn {
+  font-family: "MS Sans Serif", Tahoma;
+  font-size: 13px;
+  padding: 2px 8px;
+  background: #c0c0c0;
+  border: 2px solid #fff;
+  border-right-color: #808080;
+  border-bottom-color: #808080;
+  cursor: pointer;
+}
+
+.btn:active {
+  border: 2px solid #808080;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+}
+
+.field {
+  font-family: "MS Sans Serif", Tahoma;
+  border: 2px solid #808080;
+  background: white;
+  padding: 3px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 4px;
+}
+
+.item {
+  padding: 4px;
+  margin: 2px 0;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.item:hover {
+  background: #00008022;
+  border: 1px solid #000080;
+}
+
+.item.active {
+  background: #00008044;
+  border: 1px solid navy;
+}
+
+.editor {
+  flex: 1;
+  background: white;
+  border: 2px inset #808080;
+  padding: 6px;
+  overflow-y: auto;
+  min-height: 200px;
+}
+
+.toolbar {
+  background: #c0c0c0;
+  border-bottom: 2px solid #808080;
+  padding: 2px;
+  display: flex;
+  gap: 4px;
+}
+
+.tool {
+  font-size: 12px;
+  padding: 2px 6px;
+  background: #c0c0c0;
+  border: 2px solid #fff;
+  border-right-color: #808080;
+  border-bottom-color: #808080;
+  cursor: pointer;
+}
+
+.tool:active {
+  border: 2px solid #808080;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+}
+
+.footer {
+  font-size: 12px;
+  padding: 3px 6px;
+  background: #c0c0c0;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #808080;
+  border-bottom: 2px solid #808080;
+  color: black;
+}
+
+  </style>
+</head>
+<body>
+  <div class="app">
+
+    <!-- Cursos -->
+    <section class="panel" id="coursesPanel">
+      <div class="header">
+        <h1>📚 Cursos</h1>
+        <div class="row">
+          <button class="btn" id="addCourseBtn">+ Curso</button>
+          <button class="btn ghost" id="importBtn">Importar</button>
+          <button class="btn ghost" id="exportBtn">Exportar</button>
+        </div>
+      </div>
+      <div style="padding:8px">
+        <input class="field" id="courseSearch" placeholder="Buscar curso..." />
+      </div>
+      <div class="list" id="courseList"></div>
+      <div class="footer"><span class="hint">Doble clic para renombrar</span><span id="courseCount" class="hint"></span></div>
+    </section>
+
+    <!-- Notas del curso -->
+    <section class="panel" id="notesPanel">
+      <div class="header">
+        <h1>📝 Notas</h1>
+        <div class="row">
+          <button class="btn" id="addNoteBtn">+ Nota</button>
+          <button class="btn danger" id="deleteNoteBtn">Eliminar</button>
+        </div>
+      </div>
+      <div style="padding:8px">
+        <input class="field" id="noteSearch" placeholder="Buscar nota en el curso..." />
+      </div>
+      <div class="list" id="noteList"></div>
+      <div class="footer"><span id="noteCount" class="hint"></span><span class="hint">Selecciona una nota para editar</span></div>
+    </section>
+
+    <!-- Editor -->
+    <section class="panel" id="editorPanel">
+      <div class="header">
+        <div>
+          <h1 id="currentNoteTitle">Sin título</h1>
+          <div class="hint" id="currentCourseName">—</div>
+        </div>
+        <div class="row">
+          <span class="badge" id="lastSaved">Guardado • —</span>
+          <button class="btn primary" id="downloadHtmlBtn">Descargar HTML</button>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <button class="tool" data-cmd="bold"><b>B</b></button>
+        <button class="tool" data-cmd="italic"><i>I</i></button>
+        <button class="tool" data-cmd="underline"><u>U</u></button>
+        <button class="tool" data-cmd="insertUnorderedList">• Lista</button>
+        <button class="tool" data-cmd="insertOrderedList">1. Lista</button>
+        <button class="tool" id="h2Btn">H2</button>
+        <button class="tool" id="linkBtn">🔗 Enlace</button>
+        <button class="tool" id="clearBtn">Limpiar formato</button>
+      </div>
+
+      <div class="meta">
+        <span class="pill" id="wordCount">0 palabras</span>
+        <span class="pill" id="charCount">0 caracteres</span>
+        <span class="pill" id="readingTime">0 min lectura</span>
+      </div>
+
+      <div id="editor" class="editor" contenteditable="true" data-placeholder="Escribe aquí... Usa la barra de herramientas para dar formato e insertar enlaces."></div>
+
+      <div class="footer">
+        <span class="hint">Consejo: selecciona texto y pulsa 🔗 para crear un enlace.</span>
+        <span class="hint" id="status">Listo</span>
+      </div>
+    </section>
+  </div>
+
+  <input type="file" id="importFile" accept="application/json" style="display:none" />
+
+  <script>
+  // --- Utilidades ---
+  const $ = s => document.querySelector(s);
+  const $$ = s => Array.from(document.querySelectorAll(s));
+  const uid = () => crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).slice(2);
+  const nowISO = () => new Date().toISOString();
+  const formatDate = iso => new Date(iso).toLocaleString();
+
+  const STORAGE_KEY = 'notasUni.v1';
+
+  const blankState = () => ({
+    courses: [
+      { id: uid(), name: 'Ejemplo: Matemáticas', notes: [
+        { id: uid(), title: 'Clase 1 — Límites', html: '<h2>Introducción</h2><p>Definición de límite...</p><p>Recurso: <a href="https://es.khanacademy.org/math" target="_blank">Khan Academy</a></p>', updatedAt: nowISO() }
+      ] }
+    ],
+    selectedCourseId: null,
+    selectedNoteId: null
+  });
+
+  let state = load();
+  if(!state){ state = blankState(); save(); }
+  if(!state.selectedCourseId && state.courses[0]) state.selectedCourseId = state.courses[0].id;
+  if(!state.selectedNoteId && state.courses[0]?.notes[0]) state.selectedNoteId = state.courses[0].notes[0].id;
+
+  // --- Persistencia ---
+  function save(){
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    $('#lastSaved').textContent = 'Guardado • ' + formatDate(nowISO());
+  }
+  function load(){
+    try{ return JSON.parse(localStorage.getItem(STORAGE_KEY)); }catch(e){ return null }
+  }
+
+  // --- Render ---
+  function renderCourses(){
+    const q = $('#courseSearch').value.toLowerCase();
+    const list = $('#courseList'); list.innerHTML = '';
+    state.courses
+      .filter(c => c.name.toLowerCase().includes(q))
+      .forEach(c => {
+        const el = document.createElement('div');
+        el.className = 'item' + (c.id===state.selectedCourseId ? ' active' : '');
+        el.innerHTML = `<div style="display:flex; justify-content:space-between; align-items:center; gap:8px">
+          <div>
+            <strong>${escapeHtml(c.name)}</strong>
+            <small>${c.notes.length} nota(s)</small>
+          </div>
+          <div class="row">
+            <button class="btn ghost" data-act="rename" data-id="${c.id}">Renombrar</button>
+            <button class="btn danger" data-act="delete" data-id="${c.id}">×</button>
+          </div>
+        </div>`;
+        el.addEventListener('click', e => { if(e.target.closest('button')) return; state.selectedCourseId = c.id; state.selectedNoteId = c.notes[0]?.id || null; save(); renderAll(); });
+        list.appendChild(el);
+      });
+    $('#courseCount').textContent = `${state.courses.length} curso(s)`;
+  }
+
+  function renderNotes(){
+    const course = getCurrentCourse();
+    const q = $('#noteSearch').value.toLowerCase();
+    const list = $('#noteList'); list.innerHTML = '';
+    let notes = course ? course.notes : [];
+    notes = notes.filter(n => (n.title+stripHtml(n.html)).toLowerCase().includes(q));
+    notes.forEach(n => {
+      const el = document.createElement('div');
+      el.className = 'item' + (n.id===state.selectedNoteId ? ' active' : '');
+      el.innerHTML = `<strong>${escapeHtml(n.title || 'Sin título')}</strong>
+                      <small>Actualizado: ${formatDate(n.updatedAt)}</small>`;
+      el.addEventListener('click', ()=>{ state.selectedNoteId = n.id; save(); renderEditor(); renderNotes(); });
+      list.appendChild(el);
+    });
+    $('#noteCount').textContent = `${notes.length} nota(s)`;
+  }
+
+  function renderEditor(){
+    const course = getCurrentCourse();
+    const note = getCurrentNote();
+    $('#currentCourseName').textContent = course ? course.name : '—';
+    $('#currentNoteTitle').textContent = note ? (note.title || 'Sin título') : 'Sin título';
+    $('#editor').innerHTML = note ? note.html : '';
+    updateStats();
+  }
+
+  function renderAll(){ renderCourses(); renderNotes(); renderEditor(); }
+
+  function getCurrentCourse(){ return state.courses.find(c=>c.id===state.selectedCourseId) || state.courses[0] || null }
+  function getCurrentNote(){ const c = getCurrentCourse(); return c ? (c.notes.find(n=>n.id===state.selectedNoteId) || c.notes[0] || null) : null }
+
+  // --- Acciones Cursos ---
+  $('#addCourseBtn').addEventListener('click', ()=>{
+    const name = prompt('Nombre del curso:');
+    if(!name) return;
+    state.courses.push({id: uid(), name: name.trim(), notes: []});
+    state.selectedCourseId = state.courses[state.courses.length-1].id;
+    state.selectedNoteId = null;
+    save(); renderAll();
+  });
+
+  $('#courseList').addEventListener('click', (e)=>{
+    const btn = e.target.closest('button'); if(!btn) return;
+    const id = btn.dataset.id;
+    const course = state.courses.find(c=>c.id===id);
+    if(btn.dataset.act==='rename'){
+      const name = prompt('Nuevo nombre del curso:', course.name);
+      if(name){ course.name = name.trim(); save(); renderCourses(); renderEditor(); }
+    }
+    if(btn.dataset.act==='delete'){
+      if(!confirm('¿Eliminar curso y todas sus notas?')) return;
+      state.courses = state.courses.filter(c=>c.id!==id);
+      if(state.selectedCourseId===id){ state.selectedCourseId = state.courses[0]?.id || null; state.selectedNoteId = null; }
+      save(); renderAll();
+    }
+  });
+
+  $('#courseSearch').addEventListener('input', renderCourses);
+
+  // --- Acciones Notas ---
+  $('#addNoteBtn').addEventListener('click', ()=>{
+    const c = getCurrentCourse(); if(!c){ alert('Crea un curso primero'); return; }
+    const title = prompt('Título de la nota:','Nueva nota');
+    const note = { id: uid(), title: (title||'Nueva nota').trim(), html: '', updatedAt: nowISO() };
+    c.notes.unshift(note);
+    state.selectedNoteId = note.id;
+    save(); renderNotes(); renderEditor();
+  });
+
+  $('#deleteNoteBtn').addEventListener('click', ()=>{
+    const c = getCurrentCourse(); const n = getCurrentNote();
+    if(!c || !n) return;
+    if(!confirm('¿Eliminar esta nota?')) return;
+    c.notes = c.notes.filter(x=>x.id!==n.id);
+    state.selectedNoteId = c.notes[0]?.id || null;
+    save(); renderNotes(); renderEditor();
+  });
+
+  $('#noteSearch').addEventListener('input', renderNotes);
+
+  // --- Editor y formateo ---
+  $$('.tool[data-cmd]').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      document.execCommand(btn.dataset.cmd, false, null);
+      focusEditor();
+      saveCurrentHtml();
+    });
+  });
+
+  $('#h2Btn').addEventListener('click', ()=>{
+    document.execCommand('formatBlock', false, 'h2');
+    focusEditor(); saveCurrentHtml();
+  });
+
+  $('#clearBtn').addEventListener('click', ()=>{
+    const el = document.createElement('div');
+    el.innerText = stripHtml($('#editor').innerHTML);
+    $('#editor').innerHTML = el.innerHTML; // texto plano
+    saveCurrentHtml();
+  });
+
+  $('#linkBtn').addEventListener('click', ()=>{
+    const url = prompt('Pega el enlace (incluye https://):');
+    if(url){ document.execCommand('createLink', false, url); saveCurrentHtml(); }
+  });
+
+  $('#editor').addEventListener('input', ()=>{ saveCurrentHtml(); updateStats(); });
+
+  function saveCurrentHtml(){
+    const c = getCurrentCourse(); const n = getCurrentNote(); if(!c||!n) return;
+    n.html = sanitizeHtml($('#editor').innerHTML);
+    n.updatedAt = nowISO();
+    save(); renderNotes();
+  }
+
+  function focusEditor(){ $('#editor').focus(); }
+
+  function updateStats(){
+    const text = stripHtml($('#editor').innerHTML);
+    const words = (text.trim().match(/\b\w+\b/g) || []).length;
+    const chars = text.length;
+    const mins = Math.max(1, Math.round(words/200));
+    $('#wordCount').textContent = words + ' palabras';
+    $('#charCount').textContent = chars + ' caracteres';
+    $('#readingTime').textContent = mins + ' min lectura';
+  }
+
+  // --- Exportar/Importar ---
+  $('#exportBtn').addEventListener('click', ()=>{
+    const blob = new Blob([JSON.stringify(state,null,2)], {type:'application/json'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'notas-uni.json';
+    a.click();
+  });
+
+  $('#importBtn').addEventListener('click', ()=> $('#importFile').click());
+  $('#importFile').addEventListener('change', (e)=>{
+    const file = e.target.files[0]; if(!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try{
+        const obj = JSON.parse(reader.result);
+        if(!obj.courses) throw new Error('Archivo inválido');
+        state = obj; save(); renderAll(); alert('Importado con éxito');
+      }catch(err){ alert('No se pudo importar: '+err.message); }
+    };
+    reader.readAsText(file);
+  });
+
+  // --- Descargar solo la nota actual como HTML autónomo ---
+  $('#downloadHtmlBtn').addEventListener('click', ()=>{
+    const note = getCurrentNote(); if(!note){ alert('No hay nota seleccionada'); return; }
+    const html = `<!doctype html><html lang="es"><meta charset="utf-8"><title>${escapeHtml(note.title)}</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1"><style>
+        body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu;line-height:1.6;max-width:900px;margin:40px auto;padding:0 16px;color:#0f172a}
+        h1,h2,h3{line-height:1.25}
+        a{color:#0369a1}
+        .meta{color:#64748b;font-size:14px;margin-bottom:16px}
+        .card{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:18px}
+      </style>
+      <body>
+        <h1>${escapeHtml(note.title)}</h1>
+        <div class="meta">Exportado ${new Date().toLocaleString()}</div>
+        <div class="card">${note.html}</div>
+      </body></html>`;
+    const blob = new Blob([html], {type:'text/html'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = (note.title||'nota')+'.html';
+    a.click();
+  });
+
+  // --- Helpers de seguridad básicos ---
+  function escapeHtml(str=''){
+    return str.replace(/[&<>"] /g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',' ':' '}[s]));
+  }
+  function stripHtml(html=''){ const div = document.createElement('div'); div.innerHTML = html; return (div.textContent||'').replace(/\s+/g,' ').trim(); }
+  function sanitizeHtml(html=''){
+    // Permitir solo etiquetas seguras básicas
+    const allowed = ['A','B','I','U','STRONG','EM','P','UL','OL','LI','H1','H2','H3','H4','H5','H6','BR','CODE','PRE'];
+    const div = document.createElement('div'); div.innerHTML = html;
+    const walker = document.createTreeWalker(div, NodeFilter.SHOW_ELEMENT, null);
+    const toRemove = [];
+    while(walker.nextNode()){
+      const el = walker.currentNode;
+      if(!allowed.includes(el.tagName)) toRemove.push(el);
+      if(el.tagName==='A'){
+        const href = el.getAttribute('href')||'';
+        if(!/^https?:\/\//i.test(href)) el.removeAttribute('href');
+        el.setAttribute('target','_blank');
+        el.setAttribute('rel','noopener');
+      } else {
+        el.removeAttribute('style'); el.removeAttribute('onclick'); el.removeAttribute('onerror');
+      }
+    }
+    toRemove.forEach(e=> e.replaceWith(document.createTextNode(e.textContent||'')));
+    return div.innerHTML;
+  }
+
+  // --- Init ---
+  renderAll();
+
+  // Accesos rápidos
+  document.addEventListener('keydown', (e)=>{
+    if(e.ctrlKey && e.key.toLowerCase()==='s'){ e.preventDefault(); saveCurrentHtml(); }
+    if(e.ctrlKey && e.key.toLowerCase()==='b'){ e.preventDefault(); document.execCommand('bold'); saveCurrentHtml(); }
+    if(e.ctrlKey && e.key.toLowerCase()==='k'){ e.preventDefault(); $('#linkBtn').click(); }
+  });
+  </script>
+</body>
+</html>
+
